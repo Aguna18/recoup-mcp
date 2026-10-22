@@ -8,7 +8,7 @@ This MCP server answers product, pricing and fit questions about Recoup and runs
 - **Transport:** Streamable HTTP
 - **Sign-in:** none. No API key, no account.
 - **Access:** every tool is read-only.
-- **MCP Registry name:** `io.github.Aguna18/recoup`
+- **MCP Registry name:** `com.recoupaudit/recoup` ([registry entry](https://registry.modelcontextprotocol.io/v0/servers?search=com.recoupaudit/recoup))
 
 This repository holds setup instructions and the registry entry only. It contains no product code.
 
@@ -66,7 +66,9 @@ The server reads no customer data and stores nothing you send it. It only answer
 
 ## Registry publishing
 
-`server.json` is published to the official MCP Registry (registry.modelcontextprotocol.io) by `.github/workflows/publish-mcp.yml`, which logs in with GitHub OIDC. No token is stored in this repository.
+This server is listed in the official MCP Registry (registry.modelcontextprotocol.io) as `com.recoupaudit/recoup`, published under its own domain. The registry allows one name per server URL, so that domain entry is the listing.
+
+`server.json` and `.github/workflows/publish-mcp.yml` are kept for reference. The workflow runs only when started by hand from the Actions tab and logs in with GitHub OIDC, so no token is stored in this repository.
 
 ---
 

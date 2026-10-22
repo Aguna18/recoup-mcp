@@ -1,10 +1,9 @@
 name: Publish to MCP Registry
 
 on:
+  # Manual only: the server URL is already listed under its domain name, and the
+  # registry refuses a second name for the same URL ("remote URL ... is already used").
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [server.json, .github/workflows/publish-mcp.yml]
 
 jobs:
   publish:
